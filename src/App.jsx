@@ -1,6 +1,7 @@
 import GeneralInformation from "./components/generalInformation";
 import SaveResume from "./components/saveCV";
 import EducationExperience from "./components/educationExperience";
+import ProfessionalExperience from "./components/professionalExperience";
 
 function Header() {
   return <h1>CV Generator</h1>;
@@ -14,6 +15,7 @@ function App() {
         <SaveResume />
         <GeneralInformation />
         <EducationExperience />
+        <ProfessionalExperience />
       </div>
     </>
   );

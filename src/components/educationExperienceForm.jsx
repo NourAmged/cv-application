@@ -13,7 +13,7 @@ function EdForm() {
       <label htmlFor="country">Country</label>
       <input id="country" placeholder="Country" required />
       <br />
-      <div className="date">
+      <div className="date-edu">
         <label htmlFor="start">
           Start Date
           <br />

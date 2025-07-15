@@ -12,6 +12,11 @@ h1 {
     margin: 15px 0 0 30px;
 }
 
+
+textarea{
+    margin-bottom: 16px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -20,7 +25,8 @@ h1 {
 
 .cv-download-container,
 .general-information-container,
-.education-experience-container {
+.education-experience-container,
+.professional-experience-container {
     padding: 20px 0 0 30px;
     margin-bottom: -20px;
     max-width: 500px;
@@ -28,7 +34,8 @@ h1 {
 
 
 .general-information,
-.education-experience {
+.education-experience,
+.professional-experience {
     flex-direction: column;
     padding: 20px;
     display: flex;
@@ -36,7 +43,7 @@ h1 {
     border-radius: 20px;
 }
 
-.gi-form, .ed-form {
+.gi-form, .ed-form, .pe-form {
     padding-top: 10px;
     font-weight: 600;
     display: flex;
@@ -57,7 +64,7 @@ h1 {
     border-radius: 22px;
 }
 
-.date{
+.date-job, .date-edu{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -72,16 +79,18 @@ h1 {
 }
 
 .general-information div,
-.education-experience div {
+.education-experience div,
+.professional-experience div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3px;
 }
 
-.general-information input, .education-experience input {
+.general-information input, .education-experience input, .professional-experience input, textarea {
     background-color: #eef0f4;
     padding: 5px 8px 5px 8px;
     border-radius: 4px;
+    margin-top: 3px;
     border-style: none;
 }

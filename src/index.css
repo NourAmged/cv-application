@@ -19,14 +19,16 @@ h1 {
 }
 
 .cv-download-container,
-.general-information-container {
-    margin: 20px 0 0 30px;
+.general-information-container,
+.education-experience-container {
+    padding: 20px 0 0 30px;
+    margin-bottom: -20px;
     max-width: 500px;
-    height: 50px;
 }
 
 
-.general-information {
+.general-information,
+.education-experience {
     flex-direction: column;
     padding: 20px;
     display: flex;
@@ -34,13 +36,12 @@ h1 {
     border-radius: 20px;
 }
 
-.gi-form{
+.gi-form, .ed-form {
     padding-top: 10px;
     font-weight: 600;
     display: flex;
     flex-direction: column;
 }
-
 
 .cv-download {
     padding: 20px;
@@ -56,6 +57,13 @@ h1 {
     border-radius: 22px;
 }
 
+.date{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
 
 .cv-download p,
 .general-information p {
@@ -63,14 +71,15 @@ h1 {
     font-weight: 600;
 }
 
-.general-information div {
+.general-information div,
+.education-experience div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3px;
 }
 
-.general-information input {
+.general-information input, .education-experience input {
     background-color: #eef0f4;
     padding: 5px 8px 5px 8px;
     border-radius: 4px;

@@ -1,3 +1,4 @@
+import GeneralInformation from "./components/generalInformation";
 import SaveResume from "./components/saveCV";
 
 function Header() {
@@ -8,7 +9,10 @@ function App() {
   return (
     <>
       <Header />
-      <SaveResume />
+      <div className="container">
+        <SaveResume />
+        <GeneralInformation />
+      </div>
     </>
   );
 }

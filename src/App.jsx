@@ -2,6 +2,7 @@ import GeneralInformation from "./components/generalInformation";
 import SaveResume from "./components/saveCV";
 import EducationExperience from "./components/educationExperience";
 import ProfessionalExperience from "./components/professionalExperience";
+import { useState } from "react";
 import CV from "./components/cv";
 
 function Header() {
@@ -9,17 +10,19 @@ function Header() {
 }
 
 function App() {
+  const [generalInfo, setGeneralInfo] = useState(null);
+
   return (
     <>
       <Header />
       <div className="main-container">
         <div className="container">
           <SaveResume />
-          <GeneralInformation />
+          <GeneralInformation onSubmitData={setGeneralInfo} />
           <EducationExperience />
           <ProfessionalExperience />
         </div>
-        <CV />
+        <CV generalInfo={generalInfo} />
       </div>
     </>
   );

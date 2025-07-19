@@ -5,9 +5,11 @@ function CV({ generalInfo }) {
         {generalInfo ? (
           <>
             <h2>{generalInfo.name}</h2>
-            <p>Email: {generalInfo.email}</p>
-            <p>Phone: {generalInfo.phone}</p>
-            <p>Location: {generalInfo.cityProvince}</p>
+            <div>
+              <span>{generalInfo.email}</span>
+              <span>{generalInfo.phone}</span>
+              <span>{generalInfo.cityProvince}</span>
+            </div>
           </>
         ) : (
           ""

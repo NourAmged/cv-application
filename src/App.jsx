@@ -11,7 +11,6 @@ function Header() {
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState(null);
-
   return (
     <>
       <Header />

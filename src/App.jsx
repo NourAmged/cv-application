@@ -11,13 +11,14 @@ function Header() {
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState(null);
+  console.log(generalInfo);
   return (
     <>
       <Header />
       <div className="main-container">
         <div className="container">
           <SaveResume />
-          <GeneralInformation onSubmitData={setGeneralInfo} />
+          <GeneralInformation onSubmitData={setGeneralInfo} info = {generalInfo} />
           <EducationExperience />
           <ProfessionalExperience />
         </div>

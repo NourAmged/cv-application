@@ -4,7 +4,7 @@ import upArrow from "../assets/up-arrow-backup-3-svgrepo-com.svg";
 import person from "../assets/person-svgrepo-com.svg";
 import GiForm from "./generalInformationForm";
 
-function GeneralInformation({ onSubmitData }) {
+function GeneralInformation({ onSubmitData, info }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ function GeneralInformation({ onSubmitData }) {
             onClick={() => setIsOpen(!isOpen)}
           />
         </div>
-        {isOpen && <GiForm onSubmitData={onSubmitData} />}
+        {isOpen && <GiForm onSubmitData={onSubmitData} info = {info} />}
       </div>
     </div>
   );

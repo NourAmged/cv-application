@@ -12,6 +12,11 @@ h1 {
     margin: 15px 0 0 30px;
 }
 
+h5 {
+    text-decoration: underline;
+    
+}
+
 textarea {
     margin-bottom: 16px;
 }
@@ -124,7 +129,22 @@ textarea {
     gap: 12px;
 }
 
-.cv-main-info div{
+.cv-main-info div {
     display: flex;
-    gap: 12px   ;
+    gap: 12px;
+}
+
+.cv-education-info{
+    padding: 22px;
+}
+
+.cv-education-info div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cv-education-data-country{
+    display: flex;
+    flex-direction: column;
 }

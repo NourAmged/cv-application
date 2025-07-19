@@ -11,7 +11,8 @@ function Header() {
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState(null);
-  console.log(generalInfo);
+  const [educationInfo, setEducationInfo] = useState(null);
+
   return (
     <>
       <Header />
@@ -19,10 +20,10 @@ function App() {
         <div className="container">
           <SaveResume />
           <GeneralInformation onSubmitData={setGeneralInfo} info = {generalInfo} />
-          <EducationExperience />
+          <EducationExperience onSubmitData={setEducationInfo} />
           <ProfessionalExperience />
         </div>
-        <CV generalInfo={generalInfo} />
+        <CV generalInfo={generalInfo} educationInfo={educationInfo} />
       </div>
     </>
   );

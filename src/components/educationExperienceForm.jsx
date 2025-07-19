@@ -1,28 +1,54 @@
-function EdForm() {
+function EdForm({ onSubmitData }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    const result = {
+      degree: formData.get("degree"),
+      school: formData.get("school"),
+      city: formData.get("city"),
+      country: formData.get("country"),
+      start: formData.get("start"),
+      end: formData.get("end"),
+    };
+
+    onSubmitData(result);
+  };
+
   return (
-    <form className="ed-form">
+    <form className="ed-form" onSubmit={handleSubmit}>
       <label htmlFor="degree">Degree</label>
-      <input id="degree" required placeholder="Enter Degree / Field of Study" />
+      <input
+        id="degree"
+        name="degree"
+        placeholder="Enter Degree / Field of Study"
+        required
+      />
       <br />
       <label htmlFor="school">School</label>
-      <input id="school" placeholder="Enter school / university" required />
+      <input
+        id="school"
+        name="school"
+        placeholder="Enter school / university"
+        required
+      />
       <br />
       <label htmlFor="city">City</label>
-      <input id="city" placeholder="Enter City" required />
+      <input id="city" name="city" placeholder="Enter City" required />
       <br />
       <label htmlFor="country">Country</label>
-      <input id="country" placeholder="Country" required />
+      <input id="country" name="country" placeholder="Country" required />
       <br />
       <div className="date-edu">
         <label htmlFor="start">
           Start Date
           <br />
-          <input id="start" type="date" />
+          <input id="start" name="start" type="date" />
         </label>
         <label htmlFor="end">
           End Date
           <br />
-          <input id="end" type="date" />
+          <input id="end" name="end" type="date" />
         </label>
       </div>
       <button type="submit">Save</button>

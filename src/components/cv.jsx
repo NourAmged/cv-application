@@ -1,4 +1,4 @@
-function CV({ generalInfo }) {
+function CV({ generalInfo, educationInfo }) {
   return (
     <div className="cv-container">
       <div className="cv-main-info">
@@ -15,7 +15,23 @@ function CV({ generalInfo }) {
           ""
         )}
       </div>
-      <div className="cv-education-info"></div>
+      <div className="cv-education-info-container">
+        {
+          educationInfo ? (
+            <div className="cv-education-info">
+              <h5>Education</h5>
+              <div>
+                <span>{educationInfo.degree}, {educationInfo.school}</span>
+                <div className="cv-education-data-country">
+                  <p>{educationInfo.start}, {educationInfo.end}</p>
+                  <p>{educationInfo.city}, {educationInfo.country}</p>
+                </div>
+              </div>
+            </div>
+          )
+          : ""
+        }
+      </div>
       <div className="cv-pro-info"></div>
     </div>
   );

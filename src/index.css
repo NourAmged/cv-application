@@ -122,12 +122,16 @@ textarea {
 
 .education-item {
     font-size: 12px;
-    flex-direction: column;
-    align-self: flex-start;
     margin: 8px 4px 4px 4px;
     border-top: 6px solid #eef0f4;
     border-radius: 2px;
     width: 99%;
+}
+
+.education-item div{
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
 }
 
 .education-item p {

@@ -3,8 +3,9 @@ function EducationItems({ educationInfo }) {
     <div className="education-item">
       <p>{educationInfo.degree}</p>
       <p>{educationInfo.school}</p>
-      <p>{educationInfo.city}</p>
-      <p>{educationInfo.country}</p>
+      <p>
+        {educationInfo.city}, {educationInfo.country}
+      </p>
       <p>
         {educationInfo.start} - {educationInfo.end}
       </p>
@@ -26,7 +27,9 @@ function EdForm({ onSubmitData, educationInfo }) {
       end: formData.get("end"),
     };
 
-    onSubmitData([...educationInfo, result]);
+    const checkDuplicates = educationInfo.some(obj => JSON.stringify(obj) === JSON.stringify(result));
+
+    if (!checkDuplicates) onSubmitData([...educationInfo, result]);
   };
 
   return (

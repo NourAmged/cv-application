@@ -4,7 +4,8 @@ import upArrow from "../assets/up-arrow-backup-3-svgrepo-com.svg";
 import cap from "../assets/graduation-cap-svgrepo-com.svg";
 import EdForm from "./educationExperienceForm";
 
-function EducationExperience({onSubmitData}) {
+function EducationExperience({ onSubmitData, educationInfo }) {
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,7 +23,7 @@ function EducationExperience({onSubmitData}) {
             onClick={() => setIsOpen(!isOpen)}
           />
         </div>
-        {isOpen && <EdForm onSubmitData = {onSubmitData}/>}
+        {isOpen && <EdForm onSubmitData={onSubmitData} educationInfo = {educationInfo} />}
       </div>
     </div>
   );

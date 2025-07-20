@@ -1,4 +1,6 @@
-function EdForm({ onSubmitData }) {
+
+
+function EdForm({ onSubmitData, educationInfo }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -12,7 +14,7 @@ function EdForm({ onSubmitData }) {
       end: formData.get("end"),
     };
 
-    onSubmitData(result);
+    onSubmitData([...educationInfo, result]);
   };
 
   return (

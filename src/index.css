@@ -13,9 +13,10 @@ h1 {
 }
 
 h5 {
-    text-decoration: underline;
-    
+    border-bottom: 2px solid black;
+    margin-bottom: 2px;
 }
+
 
 textarea {
     margin-bottom: 16px;
@@ -134,17 +135,19 @@ textarea {
     gap: 12px;
 }
 
-.cv-education-info{
+.cv-education-info {
     padding: 22px;
 }
 
-.cv-education-info div{
+.cv-education-info div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 4px;
+    font-size: 12px;
 }
 
-.cv-education-data-country{
+.cv-education-data-country {
     display: flex;
     flex-direction: column;
 }

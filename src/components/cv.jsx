@@ -1,3 +1,5 @@
+import Education from "./educationSection";
+
 function CV({ generalInfo, educationInfo }) {
   return (
     <div className="cv-container">
@@ -16,21 +18,12 @@ function CV({ generalInfo, educationInfo }) {
         )}
       </div>
       <div className="cv-education-info-container">
-        {
-          educationInfo ? (
-            <div className="cv-education-info">
-              <h5>Education</h5>
-              <div>
-                <span>{educationInfo.degree}, {educationInfo.school}</span>
-                <div className="cv-education-data-country">
-                  <p>{educationInfo.start}, {educationInfo.end}</p>
-                  <p>{educationInfo.city}, {educationInfo.country}</p>
-                </div>
-              </div>
-            </div>
-          )
-          : ""
-        }
+        <div className="cv-education-info">
+          {educationInfo.length === 0 ? "" : <h5>Education</h5>}
+          {educationInfo.map((edu, index) => {
+            return <Education key={index} educationInfo={edu} />;
+          })}
+        </div>
       </div>
       <div className="cv-pro-info"></div>
     </div>

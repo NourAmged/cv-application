@@ -41,7 +41,11 @@ function App() {
             editIndex={profInfoIdx}
           />
         </div>
-        <CV generalInfo={generalInfo} educationInfo={educationInfo} />
+        <CV
+          generalInfo={generalInfo}
+          educationInfo={educationInfo}
+          profInfo={profInfo}
+        />
       </div>
     </>
   );

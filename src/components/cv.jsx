@@ -1,6 +1,7 @@
 import Education from "./educationSection";
+import Professional from "./professionalSection";
 
-function CV({ generalInfo, educationInfo }) {
+function CV({ generalInfo, educationInfo, profInfo }) {
   return (
     <div className="cv-container">
       <div className="cv-main-info">
@@ -25,7 +26,12 @@ function CV({ generalInfo, educationInfo }) {
           })}
         </div>
       </div>
-      <div className="cv-pro-info"></div>
+      <div className="cv-pro-info">
+        {profInfo.length === 0 ? "" : <h5>Professional Experience</h5>}
+        {profInfo.map((prof, index) => {
+          return <Professional key={index} profInfo={prof} />;
+        })}
+      </div>
     </div>
   );
 }

@@ -11,8 +11,12 @@ function Header() {
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState(null);
-  const [educationInfo, setEducationInfo] = useState([]);
+
   const [educationInfoIdx, setEducationIdx] = useState(null);
+  const [educationInfo, setEducationInfo] = useState([]);
+
+  const [profInfoIdx, setProfInfoIdx] = useState(null);
+  const [profInfo, setProfInfo] = useState([]);
 
   return (
     <>
@@ -30,7 +34,12 @@ function App() {
             onEdit={(index) => setEducationIdx(index)}
             editIndex={educationInfoIdx}
           />
-          <ProfessionalExperience />
+          <ProfessionalExperience
+            onSubmitData={setProfInfo}
+            profInfo={profInfo}
+            onEdit={(index) => setProfInfoIdx(index)}
+            editIndex={profInfoIdx}
+          />
         </div>
         <CV generalInfo={generalInfo} educationInfo={educationInfo} />
       </div>

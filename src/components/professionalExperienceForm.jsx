@@ -1,3 +1,8 @@
+// function ProfessionalItem({profInfo, onEdit}){
+
+// }
+
+
 function PeForm() {
   return (
     <form className="pe-form">
@@ -5,7 +10,7 @@ function PeForm() {
       <input id="job" required placeholder="Enter Job Title" />
       <br />
       <label htmlFor="company">Company</label>
-      <input id="compony" placeholder="Enter Company" required />
+      <input id="company" placeholder="Enter Company" required />
       <br />
       <div className="date-job">
         <label htmlFor="start">

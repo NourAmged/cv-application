@@ -4,8 +4,7 @@ import upArrow from "../assets/up-arrow-backup-3-svgrepo-com.svg";
 import suitcase from "../assets/suitcase1-svgrepo-com.svg";
 import PeForm from "./professionalExperienceForm";
 
-
-function ProfessionalExperience() {
+function ProfessionalExperience({ onSubmitData, profInfo, onEdit, editIndex }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -23,7 +22,14 @@ function ProfessionalExperience() {
             onClick={() => setIsOpen(!isOpen)}
           />
         </div>
-        {isOpen && <PeForm />}
+        {isOpen && (
+          <PeForm
+            onSubmitData={onSubmitData}
+            profInfo={profInfo}
+            onEdit={onEdit}
+            editIndex={editIndex}
+          />
+        )}
       </div>
     </div>
   );

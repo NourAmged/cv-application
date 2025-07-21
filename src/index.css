@@ -33,6 +33,7 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 22px;
+    margin-bottom: 44px;
 }
 
 .cv-download-container,
@@ -90,8 +91,9 @@ textarea {
 .cv-container {
     background-color: white;
     width: 500px;
-    height: 700px;
+    min-height: 530px;
     margin-right: 30px;
+    margin-left: 30px;
 }
 
 .cv-download p,
@@ -173,4 +175,8 @@ textarea {
 
 .cv-education-data-country p {
     margin-left: auto;
+}
+
+.education-edit{
+    padding: 2px 8px 2px 8px;
 }

@@ -54,6 +54,14 @@ function EdForm({ onSubmitData, educationInfo, onEdit, editIndex }) {
     }
 
     onSubmitData(updatedList);
+    setFormData({
+      degree: "",
+      school: "",
+      city: "",
+      country: "",
+      start: "",
+      end: "",
+    });
   };
 
   return (

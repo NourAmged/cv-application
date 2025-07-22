@@ -2,7 +2,7 @@ import GeneralInformation from "./components/generalInformation";
 import SaveResume from "./components/saveCV";
 import EducationExperience from "./components/educationExperience";
 import ProfessionalExperience from "./components/professionalExperience";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import CV from "./components/cv";
 
 function Header() {
@@ -10,6 +10,8 @@ function Header() {
 }
 
 function App() {
+  const cvRef = useRef();
+
   const [generalInfo, setGeneralInfo] = useState(null);
 
   const [educationInfoIdx, setEducationIdx] = useState(null);
@@ -23,7 +25,7 @@ function App() {
       <Header />
       <div className="main-container">
         <div className="container">
-          <SaveResume />
+          <SaveResume cvRef={cvRef} />
           <GeneralInformation
             onSubmitData={setGeneralInfo}
             info={generalInfo}
@@ -45,6 +47,7 @@ function App() {
           generalInfo={generalInfo}
           educationInfo={educationInfo}
           profInfo={profInfo}
+          ref={cvRef}
         />
       </div>
     </>

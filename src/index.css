@@ -17,6 +17,9 @@ h5 {
     margin-bottom: 2px;
 }
 
+button{
+    cursor: pointer;
+}
 
 textarea {
     margin-bottom: 16px;

@@ -41,6 +41,7 @@ function PeForm({ onSubmitData, profInfo, onEdit, editIndex }) {
 
     if (editIndex !== null && profInfo[editIndex]) {
       updatedList[editIndex] = newEntry;
+      onEdit(null);
     } else {
       const isDuplicate = profInfo.some(
         (obj) => JSON.stringify(obj) === JSON.stringify(newEntry)
@@ -50,6 +51,7 @@ function PeForm({ onSubmitData, profInfo, onEdit, editIndex }) {
     }
 
     onSubmitData(updatedList);
+
     setFormData({
       job: "",
       company: "",

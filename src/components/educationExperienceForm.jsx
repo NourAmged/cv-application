@@ -45,6 +45,7 @@ function EdForm({ onSubmitData, educationInfo, onEdit, editIndex }) {
 
     if (editIndex !== null && educationInfo[editIndex]) {
       updatedList[editIndex] = newEntry; // Edit
+      onEdit(null);
     } else {
       const isDuplicate = educationInfo.some(
         (obj) => JSON.stringify(obj) === JSON.stringify(newEntry)

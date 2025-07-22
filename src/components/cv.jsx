@@ -1,9 +1,9 @@
 import Education from "./educationSection";
 import Professional from "./professionalSection";
 
-function CV({ generalInfo, educationInfo, profInfo }) {
+function CV({ generalInfo, educationInfo, profInfo, ref }) {
   return (
-    <div className="cv-container">
+    <div className="cv-container" ref={ref}>
       <div className="cv-main-info">
         {generalInfo ? (
           <>

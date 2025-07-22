@@ -122,7 +122,8 @@ textarea {
     border-style: none;
 }
 
-.education-item {
+.education-item,
+.professional-item {
     font-size: 12px;
     margin: 8px 4px 4px 4px;
     border-top: 6px solid #eef0f4;
@@ -130,13 +131,15 @@ textarea {
     width: 99%;
 }
 
-.education-item div{
+.education-item div,
+.professional-item div {
     padding-top: 4px;
     display: flex;
     flex-direction: column;
 }
 
-.education-item p {
+.education-item p,
+.professional-item p {
     margin-right: auto;
 }
 
@@ -156,11 +159,13 @@ textarea {
     gap: 12px;
 }
 
-.cv-education-info {
+.cv-education-info,
+.cv-pro-info {
     padding: 22px;
 }
 
-.cv-education-info div {
+.cv-education-info div,
+.cv-pro-info div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -177,6 +182,13 @@ textarea {
     margin-left: auto;
 }
 
-.education-edit{
+.education-edit,
+.professional-edit {
     padding: 2px 8px 2px 8px;
+}
+
+.cv-pro-info div div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

@@ -12,9 +12,6 @@ function SaveResume({ cvRef }) {
       callback: function (doc) {
         doc.save("cv.pdf");
       },
-      x: 10,
-      y: 10,
-      html2canvas: { scale: 0.6 },
     });
   };
 

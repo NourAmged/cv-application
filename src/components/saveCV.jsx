@@ -1,8 +1,6 @@
 import jsPDF from "jspdf";
 
 function SaveResume({ cvRef }) {
-  console.log(cvRef);
-
   const save = () => {
     const doc = new jsPDF("p", "pt", "a4");
 
